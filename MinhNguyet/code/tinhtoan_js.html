@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính toán JS</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt('nhập số a:'));
+        var b = parseInt(prompt('nhập số b:'));
+        document.write('so a la: ' + '<span style="color: red">' + a + '</span><br/>');
+        document.write('so b la: ' + '<span style="color: red">' + b + '</span><br/>');
+        document.write('==================================================<br/>');
+
+        function tinhtong() {
+            var tong = a + b;
+            document.write('tong ' + a + ' va ' + b + ' la: ' + '<span style="color:blue">' + tong + '</span><br/>');
+        }
+        function tinhhieu() {
+            var hieu = a - b;
+            document.write('hieu ' + a + ' va ' + b + ' la: ' + '<span style="color:blue">' + hieu + '</span><br/>');
+
+        }
+        function tinhnhan() {
+            var tich = a * b;
+            document.write('tich ' + a + ' va ' + b + ' la: ' + '<span style="color:blue">' + tich + '</span><br/>');
+
+        }
+        function tinhthuong() {
+            var thuong = a / b;
+            document.write('thuong ' + a + ' va ' + b + ' la: ' + '<span style="color:blue">' + thuong + '</span><br/>');
+
+        }
+    </script>
+</body>
+<input type="button" value="Tính tổng" onclick="tinhtong()"/><br/>
+<input type="button" value="Tính hiệu" onclick="tinhhieu()"/><br/>
+<input type="button" value="Tính nhân" onclick="tinhnhan()"/><br/>
+<input type="button" value="Tính thương" onclick="tinhthuong()"/><br/>
+
+
+
+
+</html>

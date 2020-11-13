@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website Salomon - Góp ý</title>
+</head>
+
+<body>
+    <form name="formGopY" id="formGopY" method="POST" action="#" oninput="out_trinhdo.value=trinhdo.valueAsNumber">
+        <table border="1px" cellspacing="0" width="600px">
+            <tr>
+                <td colspan="2" align="center" bgcolor="#58D3F7">Nhập thông tin góp ý</td>
+            </tr>
+            <tr>
+                <td width="150px" align="right">Chủ đề:</td>
+                <td>
+                    <input type="text" list="list_title" size="20"/>
+                    <datalist id="list_title">
+                        <option label="mr" value="mister"></option>
+                        <option label="mrs" value="mistress"></option>
+                        <option label="ms" value="miss"></option>
+                    </datalist>
+                </td>
+            </tr>
+           
+            <tr>
+                <td align="right">tên</td>
+                <td>
+                    <input name="Diachi" type="text" id="Diachi" placeholder="nhập tên "/>
+                    <label id="DCBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">mật khẩu:</td>
+                <td>
+                    <input name="Phone" type="password" id="Phone" placeholder="nhập mật khẩu" />
+                    <label id="PhoneBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">địa chỉ:</td>
+                <td>
+                    <textarea name="add" id="add"></textarea>
+                    <label id="PhoneBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Email:</td>
+                <td>
+                    <input name="Email" type="email" id="Email" required/>
+                    <label id="EmailBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Trình độ:</td>
+                <td>
+                  0 <input type="range" name="trinhdo"  min="0" max="12" value="0"/> 
+                  <output for="trinhdo" name="out_trinhdo">12</output>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">ngày sinh</td>
+                <td>
+                   <input type="date" name="ngaysinh" id="ngaysinh"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Telephone:</td>
+                <td>
+                    <input type="number" name="tele" id="tele" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">màu:</td>
+                <td>
+                    <input type="color" name="mau" id="mau" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="submit" id="submit" value="Submit" />
+                    <input type="reset" name="reset" id="reset" value="Reset" />
+                    <input type="image" name="submitAnh" id="submitAnh" src="img/dangnhap.png" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

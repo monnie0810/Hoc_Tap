@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bảng table học css</title>
+    <script src="./js/app.js"></script>
+    <style>
+        .tabledinhdang {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+            top: 20px;
+        }
+
+        #header {
+            height: 100px;
+            background: #c0c2ff;
+        }
+
+        #header td {
+            text-align: center;
+        }
+
+        #mainmenu {
+            height: 60px;
+            background: #c1ffc0;
+        }
+
+        #mainmenu td {
+            text-align: center;
+        }
+
+        #submenu {
+            width: 30%;
+            padding: 10px;
+        }
+
+        #submenu tr td {
+            background: #ffc0d7;
+            padding: 5px;
+        }
+
+        #footer {
+            height: 40px;
+            background: #ffc0d7;
+        }
+
+        #footer td {
+            text-align: center;
+        }
+
+        .list_fa {
+            padding-left: 10px;
+        }
+
+        .list_fa li {
+            list-style-type: none;
+        }
+
+        .list_fa li a {
+
+            color: darkgreen;
+            text-decoration: none;
+        }
+
+        .list_ch {
+            padding-left: 20px;
+        }
+
+        .list_ch li {
+            list-style-image: url('bullet_icon.png');
+
+        }
+
+        .list_ch li a {
+            list-style-type: none;
+
+            color: darkgray;
+            text-decoration: none;
+        }
+
+        .table_sp {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hinh_sp {
+
+            width: 150px;
+            height: 150px;
+        }
+
+        .ten_sp {
+            color: darkorchid;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .gia_sp {
+            color: darkred;
+            font-weight: bold;
+        }
+
+        #title_sp {
+            padding: 5px 0px;
+            color: #2417e6;
+            font-weight: bold;
+            background: #def38c;
+
+        }
+
+        .dangnhap {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+
+        }
+
+        .box1 {
+            top: 10px;
+            left: 10px;
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .hinhanh {
+            width: 400px;
+            height: 400px;
+            bottom: 40px;
+            left: 10px;
+
+        }
+
+        .mota {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #8875c7;
+            color: white;
+        }
+
+        .hoplon {
+            position: relative;
+
+        }
+
+        .hop1 {
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 300px;
+            background: pink;
+            z-index: 10px;
+            position: absolute;
+        }
+
+        .hop2 {
+            top: 40px;
+            left: 40px;
+            width: 300px;
+            height: 300px;
+            background: violet;
+            z-index: 20px;
+            position: absolute;
+        }
+
+        .hop3 {
+            top: 60px;
+            left: 60px;
+            width: 300px;
+            height: 300px;
+            background: #da2b2b;
+            z-index: 30px;
+            position: absolute;
+        }
+
+        .nenmenu {
+            background-image: url('img/nen_pattem.jpg');
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+
+        .box_tieude {
+            background: #333333;
+            text-align: center;
+            width: 600px;
+            height: 50px;
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 8px 20px 27px 38px rgba(0, 0, 0, 0.37);
+            bottom: 10px;
+        }
+
+        .tieude {
+            text-decoration: white;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_tieude">
+        <h1 class="tieude">
+            tiêu đề đầu tiên
+        </h1>
+
+
+    </div>
+    <table class="tabledinhdang">
+        <tr id="header">
+            <td colspan="2"> BANNER</td>
+        </tr>
+        <tr id="mainmenu">
+            <td colspan="2"> MENU NGANG</td>
+        </tr>
+        <tr class="nenmenu">
+            <td id="submenu">
+                <table border="1px" class="tabledinhdang">
+                    <tr>
+                        <td>DANH MỤC SẢN PHẨM</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="list_fa">
+                                <li><a href="#"> SONY</a>
+                                    <ul class="list_ch">
+                                        <li> <a href="#">camera</a></li>
+                                        <li> <a href="#">laptop</a></li>
+                                        <li> <a href="#">phone</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"> SAMSUNG</a>
+
+                                    <ul class="list_ch">
+                                        <li> <a href="#">camera</a></li>
+                                        <li> <a href="#">laptop</a></li>
+                                        <li> <a href="#">phone</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#"> APPLE</a>
+                                    <ul class="list_ch">
+                                        <li> <a href="#">camera</a></li>
+                                        <li> <a href="#">laptop</a></li>
+                                        <li> <a href="#">phone</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!-- end submenu -->
+            <td>
+                <table border="1px" class="table_sp">
+                    <tr>
+                        <td colspan="4" id="title_sp"> SAN PHAM MOI</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/hinh.jpg" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+                        <td>
+                            <img src="img/security_code.png" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+                        <td>
+                            <img src="img/hinh.jpg" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/security_code.png" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+                        <td>
+                            <img src="img/hinh.jpg" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+                        <td>
+                            <img src="img/security_code.png" class="hinh_sp" /><br />
+                            <span class="ten_sp">Apple Ipod Touch</span> <br />
+                            Giá: <span class="gia_sp">18.000.000 </span> VNĐ
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr id="footer">
+            <td colspan="2"> FOOTER</td>
+
+        </tr>
+    </table>
+
+    <div class="box1">
+        <img src="img/student.JPG" class="hinhanh">
+        <span class="mota">thuộc tính mô tả hình ảnh</span>
+    </div>
+    <div class="dangnhap">
+        <a href="#">
+            <img src="img/dangnhap.png">
+        </a>
+    </div>
+    <div class="hoplon">
+        <div class="hop1">
+            <h3>hộp 1</h3>
+        </div>
+        <div class="hop2">
+            <h3>hộp 2</h3>
+        </div>
+        <div class="hop3">
+            <h3>hộp 3</h3>
+        </div>
+    </div>
+</body>
+
+</html>

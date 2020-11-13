@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website Salomon - Góp ý</title>
+</head>
+
+<body>
+    <form name="formGopY" id="formGopY" method="POST" action="#">
+        <table border="1px" cellspacing="0" width="600px">
+            <tr>
+                <td colspan="2" align="center" bgcolor="#58D3F7">Nhập thông tin góp ý</td>
+            </tr>
+            <tr>
+                <td width="150px" align="right">Chủ đề:</td>
+                <td>
+                    <select name="slchude" id="slchude">
+                        <option value="dichvu">Góp ý về dịch vụ </option>
+                        <option value="website">Góp ý về website </option>
+                        <option value="sanpham">Góp ý về sản phẩm  </option>
+                        <option value="khac">Góp ý khác </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Họ và tên:</td>
+                <td>
+                    <input name="Hoten" type="text" id="Hoten" />
+                    <label id="TenBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Địa chỉ:</td>
+                <td>
+                    <input name="Diachi" type="text" id="Diachi" />
+                    <label id="DCBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Điện thoại:</td>
+                <td>
+                    <input name="Phone" type="text" id="Phone" />
+                    <label id="PhoneBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Email:</td>
+                <td>
+                    <input name="Email" type="text" id="Email" />
+                    <label id="EmailBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Bạn biết Salomon qua:</td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="checkbox_1" value="bc" />Báo chí<br/>
+                    <input type="checkbox" name="checkbox" id="checkbox_2" value="in"/>Internet<br/>
+                    <input type="checkbox" name="checkbox" id="checkbox_3" value="tm"/>Truyền miệng<br/>
+                    <input type="checkbox" name="checkbox" id="checkbox_4" value="kh"/>Khác
+
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Bạn có giao dịch qua Salomon chưa:</td>
+                <td>
+                    <input type="radio" name="radio" id="radio_1" value="co"/>Có
+                    <input type="radio" name="radio" id="radio_2" value="khong"/>Không
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Nội dung:</td>
+                <td>
+                    <textarea name="Noidung" id="Noidung"></textarea>
+                    <label id="NoidungBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">tệp tin:</td>
+                <td>
+                   <input type="file" name="hinh" id="hinh" />
+                       
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="#" > quên mật khẩu</a>
+                   </td>
+                
+            </tr>
+            <tr>
+                    <td align="right">mã an toàn:</td>
+                    <td>
+                       <input type="text" name="antoan" id="antoan" />
+                       <img src="img/security_code.png">
+                           
+                    </td>
+                </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="submit" id="submit" value="Submit" />
+                    <input type="reset" name="reset" id="reset" value="Reset" />
+                    <input type="image" name="submitAnh" id="submitAnh" src="img/dangnhap.png" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

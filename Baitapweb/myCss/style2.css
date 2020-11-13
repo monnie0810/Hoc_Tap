@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* phan tha */
+body{
+    background-color: black;
+
+}
+/* phan tong */
+.main{
+    background-color: white;
+    display: block;
+    margin: auto;
+    width: 820px;
+    height: 389px;
+    padding: 10px 5px 10px 5px;
+}
+/* Phan 1 */
+.div1{
+    display: block;
+    background-color: orange;
+    color: white;
+    border-radius: 4px 4px 4px 4px;
+}
+.div1 h1{
+    padding: 10px 0px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div1 p{
+    padding: 0px 0px 7px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+/* Phan 2 */
+.div2{
+    display:block;
+    padding: 5px 0px 0px 0px;
+    float: left;
+}
+.ul1{
+    
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.li1{
+    margin-top: 5px;
+    /* background-color: burlywood; */
+    border: 2px solid black;
+    border-radius: 4px 4px 4px 4px;
+}
+.li1 a{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 16px;
+    display: block;
+    color: black;
+    background-color: burlywood;
+    text-decoration: none;
+}
+.li1 a:hover{
+    border-radius: 4px 4px 4px 4px;
+    /* height: 20px; */
+    background-color:gray;
+    color: white;
+}
+/* Phan 3 */
+.div3{
+    display:block;
+    float: left;
+    width: 417px;
+    margin: 25px 0px 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h1{
+    line-height: 15px;
+    padding-bottom: 20px;
+}
+.div3 span{
+    text-decoration: underline;
+}
+.div3 h3{
+    padding: 10px 0px 10px 0px;
+}
+/* Phan 4 */
+.div4{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    float: right;
+    /* border: 1px solid black; */
+    width: 160px;
+    height: 79%;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 5px 0px 5px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: cornflowerblue;
+}
+.div4 h3{
+    padding: 10px 0px 10px 0px;
+}
+
+
+

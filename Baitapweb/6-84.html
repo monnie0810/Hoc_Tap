@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            table-layout: fixed;
+            width: 15%;
+        }
+        table td {
+            text-align: center;
+        }
+        table th {
+            border-top: solid 1px black;
+            text-align: right;
+            font-size: smaller;
+        }
+        table td button {
+            width: 100%;
+            padding: 5px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="4">
+                <div id = "result"> 0 </div>
+            </th>
+        </tr>
+        <tr>
+            <td><button id="key1">CE</button></td>
+            <td><button id="key2">←</button></td>
+            <td><button id="key3">%</button></td>
+            <td><button id="key4">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="key5">7</button></td>
+            <td><button id="key6">8</button></td>
+            <td><button id="key7">9</button></td>
+            <td><button id="key8">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="key9">4</button></td>
+            <td><button id="key10">5</button></td>
+            <td><button id="key11">6</button></td>
+            <td><button id="key12">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="key13">1</button></td>
+            <td><button id="key14">2</button></td>
+            <td><button id="key15">3</button></td>
+            <td><button id="key16">/</button></td>
+        </tr>
+        <tr>
+            <td><button id="key17">0</button></td>
+            <td><button id="key18">+-</button></td>
+            <td><button id="key19">,</button></td>
+            <td><button id="key20">=</button></td>
+        </tr>
+    </table>
+    <script>
+        var stringOutput = '';
+
+        var key1 = document.getElementById('key1');
+        var key2 = document.getElementById('key2');
+        var key3 = document.getElementById('key3');
+        var key4 = document.getElementById('key4');
+        var key5 = document.getElementById('key5');
+        var key6 = document.getElementById('key6');
+        var key7 = document.getElementById('key7');
+        var key8 = document.getElementById('key8');
+        var key9 = document.getElementById('key9');
+        var key10 = document.getElementById('key10');
+        var key11 = document.getElementById('key11');
+        var key12 = document.getElementById('key12');
+        var key13 = document.getElementById('key13');
+        var key14 = document.getElementById('key14');
+        var key15 = document.getElementById('key15');
+        var key16 = document.getElementById('key16');
+        var key17 = document.getElementById('key17');
+        var key18 = document.getElementById('key18');
+        var key19 = document.getElementById('key19');
+        var key20 = document.getElementById('key20');
+
+        var result = document.getElementById('result');
+
+        key1.addEventListener('click', e => {
+            stringOutput = '';
+            result.innerHTML = '0';
+        })
+
+        key2.addEventListener('click', e => {
+            stringOutput = stringOutput.slice(0,stringOutput.length-1);
+            if (stringOutput === '') result.innerHTML = 0;
+                else result.innerHTML = stringOutput;
+        })
+        
+        key3.addEventListener('click', e => {
+            stringOutput = stringOutput + '%';
+            result.innerHTML = stringOutput;
+        })
+
+        key4.addEventListener('click', e => {
+            stringOutput = stringOutput + '+';
+            result.innerHTML = stringOutput;
+        })
+
+        key5.addEventListener('click', e => {
+            stringOutput = stringOutput + '7';
+            result.innerHTML = stringOutput;
+        })
+
+        key6.addEventListener('click', e => {
+            stringOutput = stringOutput + '8';
+            result.innerHTML = stringOutput;
+        })
+
+        key7.addEventListener('click', e => {
+            stringOutput = stringOutput + '9';
+            result.innerHTML = stringOutput;
+        })
+
+        key8.addEventListener('click', e => {
+            stringOutput = stringOutput + '-';
+            result.innerHTML = stringOutput;
+        })
+
+        key9.addEventListener('click', e => {
+            stringOutput = stringOutput + '4';
+            result.innerHTML = stringOutput;
+        })
+
+        key10.addEventListener('click', e => {
+            stringOutput = stringOutput + '5';
+            result.innerHTML = stringOutput;
+        })
+
+        key11.addEventListener('click', e => {
+            stringOutput = stringOutput + '6';
+            result.innerHTML = stringOutput;
+        })
+
+        key12.addEventListener('click', e => {
+            stringOutput = stringOutput + '*';
+            result.innerHTML = stringOutput;
+        })
+
+        key13.addEventListener('click', e => {
+            stringOutput = stringOutput + '1';
+            result.innerHTML = stringOutput;
+        })
+
+        key14.addEventListener('click', e => {
+            stringOutput = stringOutput + '2';
+            result.innerHTML = stringOutput;
+        })
+
+        key15.addEventListener('click', e => {
+            stringOutput = stringOutput + '3';
+            result.innerHTML = stringOutput;
+        })
+
+        key16.addEventListener('click', e => {
+            stringOutput = stringOutput + '/';
+            result.innerHTML = stringOutput;  
+        })
+
+        key17.addEventListener('click', e => {
+            stringOutput = stringOutput + '0';
+            result.innerHTML = stringOutput;  
+        })
+
+        key18.addEventListener('click', e => {
+            stringOutput = stringOutput + '(-)';
+            result.innerHTML = stringOutput;  
+        })
+
+        key19.addEventListener('click', e => {
+            stringOutput = stringOutput + ',';
+            result.innerHTML = stringOutput;  
+        })
+        
+        key20.addEventListener('click', e => {
+            if (stringOutput === '') result.innerHTML = '0';
+                else result.innerHTML = eval(stringOutput);
+            stringOutput = '';            
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="vendor/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <h1>Hoc Vue JS</h1>
+
+    <div id="app">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col" v-for="item in listNews">
+                    <news-item v-bind:obj="item" v-bind:key="item.id"></news-item>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+        </div>
+
+    </div>
+
+    <script src="vendor/vue/vue.js"></script>
+
+    <script>
+        Vue.component('news-item', {
+            props: ['obj'],
+            template: `
+                <div class="card h-100 shadow-sm">
+                    <img :src="obj.feature_image" alt="" class="card-img-top news-item-img">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ obj.title }}</h5>
+                        <p class="card-text">{{ obj.description }}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a :href="obj.link">Xem thêm</a>
+                    </div>
+                 </div>
+            `
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                listNews: [{
+                    id: 1,
+                    feature_image: 'img/anh_demo.jpg',
+                    title: '[VTV1] Chia sẻ lộ trình với người khác',
+                    description: 'Hiện thực hóa 1 ý tưởng đã thành công không dễ khi thị trường có nhiều sự khác biệt. Cùng tìm hiểu ngay!',
+                    link: '/pages/news/hien-thuc-hoa-y-tuong.html'
+                },
+                {
+                    id: 2,
+                    feature_image: 'img/foody-675x355_foodyappbanner-636530746968443602 (1).jpg',
+                    title: 'Hành trình đi chung taxi về quê',
+                    description: 'Chương trình "Hành trình 24h" được phát xong (12h55) ngày 03/02/2016 đề cập đến vấn đề đi chung taxi về quê.',
+                    link: '/pages/news/hanh-trinh-di-chung-taxi-ve-que.html'
+                },
+                ]
+
+            },
+            
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

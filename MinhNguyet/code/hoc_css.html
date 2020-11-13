@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thiết kế MENU ngang</title>
+    <script src="./js/app.js"></script>
+    <style>
+        .level1 {
+            list-style-type: none;
+            padding-left: 0px;
+
+
+        }
+
+        .level1 li {
+            float: left;
+            padding: 10px;
+            background-color: aqua;
+            border: 1px solid darkblue;
+            display: block;
+            position: relative;
+            width: 100px;
+            text-align: center;
+        }
+
+        .level1 li:hover {
+            background-color: lightyellow;
+            border: 1px solid darkgoldenrod;
+        }
+
+        .level1 li a {
+            text-decoration: none;
+        }
+
+        .level1 li:hover ul {
+            display: block;
+
+        }
+
+        .level2 {
+            list-style-type: none;
+            display: none;
+            padding-left: 0px;
+            position: absolute;
+            left: 0px;
+            top: 39px;
+
+
+        }
+
+        .level2 li {
+            float: none;
+            background-color: lightpink;
+            color: brown;
+
+
+        }
+
+        .level2 li:hover {
+            background-color: lightgreen;
+            color: darkgreen;
+        }
+
+
+        .level2 li a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script> 
+    document.write(' <h1 style="color: violet">Menu ngang</h1>');
+    confirm('bạn có chắc chắn muốn xóa không ?');
+    </script>
+   
+    <ul class="level1">
+        <li><a href="#">Trang chủ </a></li>
+        <li><a href="#">Giới thiệu </a>
+            <ul class="level2">
+                <li><a href="#">Danh mục 1 </a></li>
+                <li><a href="#">Danh mục 2 </a></li>
+                <li><a href="#">Danh mục 3 </a></li>
+            </ul>
+
+        </li>
+        <li><a href="#">Liên hệ </a></li>
+        <li><a href="#">Góp ý </a></li>
+        <li><a href="#">Quản trị </a>
+            <ul class="level2">
+                <li><a href="#">Danh mục 1 </a></li>
+                <li><a href="#">Danh mục 2 </a></li>
+                <li><a href="#">Danh mục 3 </a></li>
+            </ul>
+        </li>
+        <li><a href="#">Đăng ký </a></li>
+        <li><a href="#">Đăng nhập </a></li>
+
+    </ul>
+</body>
+
+</html>

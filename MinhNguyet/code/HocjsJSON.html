@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Học JS JSON</title>
+</head>
+
+<body>
+    <script>
+        var SV1 = {
+            MSSV: 'B001',
+            hoten: 'Nguyễn Thị A',
+            DiemLT: 5,
+            DiemTH: 8,
+            KQ: 'Đậu',
+
+        };
+        var DSSV = [
+            {
+                MSSV: 'B001',
+                hoten: 'Nguyễn Thị A',
+                DiemLT: 5,
+                DiemTH: 8,
+                KQ: 'Đậu',
+            },
+            {
+                MSSV: 'B002',
+                hoten: 'Nguyễn Thị B',
+                DiemLT: 4,
+                DiemTH: 1,
+                KQ: 'Rớt',
+            },
+        ];
+    </script>
+    MSSV: <input type="text" name="MSSV" id="MSSV" /></body><br>
+Họ tên: <input type="text" name="hoten" id="hoten" /></body><br>
+Điểm LT: <input type="text" name="LT" id="LT" /></body><br>
+Điểm TH:<input type="text" name="TH" id="TH" /></body><br>
+Kết quả: <input type="text" name="KQ" id="KQ" /></body><br>
+<input type="button" name="them" id="them" value="Thêm" onclick="ThemSV()" />
+<input type="button" name="hienthi" id="hienthi" value="Hiển thị" onclick="HienthiSV()" />
+<div id="vungkq">
+
+</div>
+
+<script>
+    function HienthiSV() {
+
+        var html = '<table border = "1px", cellspacing ="0">';
+        html += '<tr>';
+        html += '<td>' + 'MS sinh viên' + '</td>';
+        html += '<td>' + 'Họ tên sinh viên' + '</td>';
+        html += '<td>' + 'Điểm LT' + '</td>';
+        html += '<td>' + 'Điểm TH' + '</td>';
+        html += '<td>' + 'Kết quả' + '</td>';
+        html += '</tr>';
+        DSSV.forEach(function (item) {
+            html += '<tr>';
+            html += '<td>' + item.MSSV + '</td>';
+            html += '<td>' + item.hoten + '</td>';
+            html += '<td>' + item.DiemLT + '</td>';
+            html += '<td>' + item.DiemTH + '</td>';
+            html += '<td>' + item.KQ + '</td>';
+            html += '</tr>';
+
+        });
+        html += '</table>';
+        var elekq = document.getElementById('vungkq');
+        elekq.innerHTML = html;
+    }
+
+
+    function ThemSV() {
+        var I_MSSV = document.getElementById('MSSV').value;
+        var I_hoten = document.getElementById('hoten').value;
+        var I_DiemLT = document.getElementById('LT').value;
+        var I_DiemTH = document.getElementById('TH').value;
+        var I_KQ = document.getElementById('KQ').value;
+
+        var obj = {
+            MSSV: I_MSSV,
+            hoten: I_hoten,
+            DiemLT: I_DiemLT,
+            DiemTH: I_DiemTH,
+            KQ: I_KQ
+        }
+        DSSV.push(obj);
+        document.getElementById('MSSV').value = '';
+        document.getElementById('hoten').value = '';
+        document.getElementById('LT').value = '';
+        document.getElementById('TH').value = '';
+        document.getElementById('KQ').value = '';
+        HienthiSV();
+    }
+
+</script>
+
+</body>
+
+</html>

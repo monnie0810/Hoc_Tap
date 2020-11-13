@@ -1,0 +1,122 @@
+--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Bài tập 1</title>
+	<style type="text/css">
+		label{
+			float: left;
+			width: 120px;
+		}
+		input{
+			margin-bottom: 10px;
+		}
+		.error{
+			color: red;
+		}
+		
+		
+	</style>
+	<script type="text/javascript">
+		function getInfo()
+		{
+			var tendn = document.getElementById("tendn").value;
+			var mk = document.getElementById("mk").value;
+			var mk1 = document.getElementById("mk1").value;
+			var ho = document.getElementById("ho").value;
+			var ten = document.getElementById("ten").value;
+
+			var email = document.getElementById("email").value;
+
+			var sdt = document.getElementById("sdt").value;
+				// tên đăng nhập
+			if(tendn == ""){
+				document.getElementById("errorname").innerHTML = "Vui lòng nhập tên đăng nhập!";
+			} else {
+				document.getElementById("errorname").innerHTML = "";
+			}
+				// mật khẩu
+			if(mk == ""){
+				document.getElementById("errormk").innerHTML = "Vui lòng nhập mật khẩu!";
+			} else {
+				document.getElementById("errormk").innerHTML = "";
+			}
+				// nhập lại mật khẩu
+			if(mk != mk1){
+				document.getElementById("errormk").innerHTML = "Vui lòng nhập lại mật khẩu!";
+			} else {
+				document.getElementById("errormk1").innerHTML = "";
+			}
+				// họ của bạn
+			if(ho == ""){
+				document.getElementById("errorho").innerHTML = "Vui lòng nhập họ của bạn!";
+			} else {
+				document.getElementById("errorho").innerHTML = "";
+			}
+				// tên của bạn
+			if(ten == ""){
+				document.getElementById("errorten").innerHTML = "Vui lòng nhập tên của bạn!";
+			} else {
+				document.getElementById("errorten").innerHTML = "";
+			}
+				// email
+			if(email == ""){
+				document.getElementById("erroremail").innerHTML = "Vui lòng nhập email!";
+			} else {
+				document.getElementById("erroremail").innerHTML = "";
+			}
+				// số điện thoại
+			if(sdt == ""){
+				document.getElementById("errorsdt").innerHTML = "Vui lòng nhập số điện thoại!";
+			} else {
+				document.getElementById("errorsdt").innerHTML = "";
+			}
+				// kiểm tra kết quả
+			if (tendn && mk && mk1 && ho && ten && email && sdt) {
+				alert("Đăng ký thành công!")
+				info = "Tên đăng nhập của bạn là&nbsp;"+tendn+"<br/>";
+				info += "Mật khẩu của bạn là&nbsp;"+mk+"<br/>";
+				info += "Nhập lại mật khẩu của bạn&nbsp;"+mk1+"<br/>";
+				info += "Tên của bạn là&nbsp;"+ten+"<br/>";
+				info += "Họ của bạn là&nbsp;"+ho+"<br/>";
+				info += "Email của bạn là&nbsp;"+email+"<br/>";
+				info += "Số điện thoại của bạn là&nbsp;"+sdt;
+				document.getElementById("kq").innerHTML = info;
+			}
+		}
+	</script>
+</head>
+<body>
+		<h2>Đăng ký tài khoản hệ thống</h2>
+		<form action="" method="post">
+				<label>Tên đăng nhập</label>
+				<input type="text" name="fullname" id="tendn" value="" />
+				<span id="errorname" class="error"></span><br/>
+
+				<label>Mật khẩu</label>
+				<input type="text" name="nhapmk" id="mk" value="" />
+				<span id="errormk" class="error"></span><br/>
+
+				<label>Nhập lại mật khẩu</label>
+				<input type="text" name="nhapmk1" id="mk1" value="" />
+				<span id="errormk1" class="error"></span><br/>
+
+				<label>Họ của bạn</label>
+				<input type="text" name="nhaphp" id="ho"  value="" />
+				<span id="errorho" class="error"></span><br/>
+
+				<label>Tên của bạn</label>
+				<input type="text" name="nhapten" id="ten" value="" />
+				<span id="errorten" class="error"></span><br/>
+
+				<label>Email</label>
+				<input type="email" placeholder="user@gmail.com" id="email" />
+				<span id="erroremail" class="error"></span><br/>
+
+				<label>Số điện thoại</label>
+				<input type="text" name="sdt" id="sdt" value="" />
+				<span id="errorsdt" class="error"></span><br/>
+			<input type="submit" onclick="getInfo(); return false;"/>
+		</form>
+</body>
+</html>

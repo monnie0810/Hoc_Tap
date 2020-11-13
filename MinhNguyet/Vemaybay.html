@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website đặt vé máy bay </title>
+</head>
+
+<body>
+    <form name="DatVe" id="DatVe" method="POST" action="#">
+        <!-- thông tin cá nhân -->
+        <table border="1px" cellspacing="0" width="700px">
+            <tr>
+                <td colspan="3">Thông tin cá nhân</td>
+            </tr>
+            <tr>
+                <td >Họ tên:</td>
+                <td>
+                    <input name="Hoten" type="text" id="Hoten" />
+                </td>
+                <td>
+                    <label id="TenBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>CMND:</td>
+                <td>
+                    <input name="CMND" type="text" id="CMND" />
+                </td>
+                <td>
+                    <label id="CMNDBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:</td>
+                <td>
+                    <input name="DC" type="text" id="DC" />
+                </td>
+                <td>
+                    <label id="DCBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>SĐT:</td>
+                <td>
+                    <input name="SDT" type="text" id="SDT" />
+                </td>
+                <td>
+                    <label id="SDTBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Độ tuổi:</td>
+                <td>
+                    <input type="radio" name="radio_tuoi" id="radio_tuoi_1" value="nho10" />
+                    <=10 tuổi<br />
+                    <input type="radio" name="radio_tuoi" id="radio_tuoi_2" value="nho15" />
+                    <=15 tuổi<br />
+                    <input type="radio" name="radio_tuoi" id="radio_tuoi_3" value="lon15" />>15 tuổi
+
+                </td>
+                <td>
+                    <label id="TuoiBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <!-- thông tin đặt vé -->
+        <table border="1px" cellspacing="0" width="700px">
+            <tr>
+                <td>Hãng hàng không:</td>
+                <td>
+                    <select name="hang" id="hang">
+                        <option value="hang1">Hãng 1</option>
+                        <option value="hang2">Hãng 2</option>
+                        <option value="hang3">Hãng 3</option>
+                        <option value="hang4">Hãng 4</option>
+                    </select>
+                </td>
+                <td>
+                    <label id="TuoiBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Hành trình:</td>
+                <td>Từ:
+                    <select name="hanhtrinhtu" id="hanhtrinhtu">
+                        <option value="httu1">Bắc Kinh</option>
+                        <option value="httu2">Vân Nam</option>
+                        <option value="httu3">Chiết Giang</option>
+                        <option value="httu4">Vũ Hán</option>
+                    </select>
+                    Đến:
+                    <select name="hanhtrinhden" id="hanhtrinhden">
+                        <option value="htden1">Bắc Kinh</option>
+                        <option value="htden2">Vân Nam</option>
+                        <option value="htden3">Chiết Giang</option>
+                        <option value="htden4">Vũ Hán</option>
+                    </select>
+                </td>
+                <td>
+                    <label id="TuoiBatBuoc">
+                        <font color="red">*</font>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Giờ bay:</td>
+                <td>
+                        <input name="gio" type="text" id="gio" /> giờ
+                        <input name="phut" type="text" id="phut" /> phút
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>Loại vé:</td>
+                <td>
+                        <input type="checkbox" name="checkbox" id="checkbox_1" value="bc" />đi<br/>
+                        <input type="checkbox" name="checkbox" id="checkbox_2" value="in"/>về<br/>
+                </td>
+            </tr>
+            <tr>
+                    <td colspan="3">
+                            <input type="submit" name="submit" id="submit" value="Submit" />
+                            <input type="reset" name="reset" id="reset" value="Reset" />
+                            <input type="image" name="submitAnh" id="submitAnh" src="img/dangnhap.png" />
+                    </td>
+                </tr>
+
+        </table>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form bình chọn</title>
+    <link rel="stylesheet" href="formbinhchon.css">
+    <script>
+        function binhchon() {
+            var hoten = document.getElementById('hoten').value;
+            var gioitinh;
+            var gioitinhbinhchon = document.getElementsByName('gioitinh');
+            for (var i = 0; i < gioitinhbinhchon.length; i++) {
+                var elegioitinh = document.getElementsByName("gioitinh").item(i);
+                if (elegioitinh.checked == true) {
+                    gioitinh = elegioitinh.value;
+                }
+            }
+            var diadiem = "";
+            var điaiembinhchon = document.getElementsByName("diadiem").length;
+            for (var i = 0; i < điaiembinhchon; i++) {
+                var elediadiem = document.getElementsByName("diadiem").item(i);
+                if (elediadiem.checked == true) {
+                    diadiem += elediadiem.value + ' | ';
+                }
+            }
+            var j = document.forms[0].thichnhat.selectedIndex;
+            var thichnhat = document.forms[0].thichnhat[j].value;
+            var result = hoten + " (" + gioitinh + ")" + "<br/>" + "- TP yêu thích : " + diadiem + "<br/>" + "-TP thích nhất: " + thichnhat;
+            document.getElementById('divresult').innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>BÌNH CHỌN THÀNH PHỐ YÊU THÍCH</h1>
+    <form action="#" method="$_POST" name="formbinhchon">
+
+        <table>
+            <tr>
+                <td>Họ tên: </td>
+                <td class="name"><input type="text" name="hoten" id="hoten"></td>
+            </tr>
+            <tr>
+                <td>Phái: </td>
+                <td>
+                    <input type="radio" name="gioitinh" id="gioitinh" value="nam" checked>Nam
+                    <input type="radio" name="gioitinh" id="gioitinh" value="nữ">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn địa điểm: </td>
+                <td>
+                    <input type="checkbox" name="diadiem" id="diadiem" value="Hà Nội">Hà Nội
+                    <input type="checkbox" name="diadiem" id="diadiem" value="Nha Trang">Nha Trang
+                    <input type="checkbox" name="diadiem" id="diadiem" value="TP HCM">TP HCM
+                    <input type="checkbox" name="diadiem" id="diadiem" value="Cần Thơ">Cần Thơ
+                </td>
+            </tr>
+            <tr>
+                <td>Thành phố yêu thích nhất: </td>
+                <td>
+                    <select name="thichnhat" id="thichnhat">
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Nha Trang">Nha Trang</option>
+                        <option value="TP HCM">TP HCM</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" name="button" value="Bình chọn" onclick="return binhchon()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="divresult"></div>
+
+</body>
+
+</html>

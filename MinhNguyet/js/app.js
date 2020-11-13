@@ -1,0 +1,1 @@
+alert("Thông báo: đây là thông báo nè !!")

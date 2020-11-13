@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Học Mảng JS</title>
+</head>
+
+<body>
+    Họ tên: <input type="text" name="hoten" id="hoten" /></body><br>
+<input type="button" name="them" id="them" value="Thêm" onclick="ThemSV()" />
+<input type="button" name="xoacuoi" id="xoacuoi" value="Xóa SV cuối bảng" onclick="XoaSvcuoi()" />
+<input type="button" name="dao" id="dao" value="Đảo DSSV " onclick="DaoDSSV()" />
+<input type="button" name="sx" id="sx" value="SX DSSV " onclick="SXDSSV()" />
+<input type="button" name="hienthi" id="hienthi" value="Hiển thị" onclick="HienthiSV()" />
+<div id="vungkq" style="width: 300px">
+
+
+</div><br>
+<script>
+    var DSSV = new Array(
+        'sinh viên 1',
+        'sinh viên 2',
+    );
+    function HienthiSV() {
+        var html = '<table border = "1px", cellspacing ="0">';
+        html += '<tr>';
+        html += '<td colspan=2>';
+        html += 'Danh sách sinh viên';
+        html += '</td>';
+        html +='</tr>';
+        for (i = 0; i < DSSV.length; i++) {
+            html += '<tr>';
+            html += '<td>';
+            html += (i + 1);
+            html += '</td>';
+            html += '<td>';
+            html += DSSV[i];
+            html += '</td>';
+            html += '</tr>';
+        }
+        html += '</table>';
+        var elekq = document.getElementById('vungkq');
+        elekq.innerHTML= html;    }
+        function ThemSV() {
+        var hoten = document.getElementById('hoten').value;
+        DSSV.push(hoten);
+        document.getElementById('hoten').value = '';
+        HienthiSV();
+    }
+        function XoaSvcuoi(){
+            DSSV.pop();
+            HienthiSV();
+        }
+        function DaoDSSV(){
+            DSSV.reverse();
+            HienthiSV();
+        }
+        function SXDSSV(){
+            DSSV.sort();
+            HienthiSV();
+        }
+
+</script>
+</body>
+
+</html>

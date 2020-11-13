@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Component</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="vendor/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <h1>Hoc Vue JS</h1>
+
+    <div id="app">
+       
+        <input type="text" id='hotenForm' name='hotenForm' v-model='hoten'><br/>
+        <input type="checkbox" name="sanpham" id="sp1" value="240k" v-model='giasanpham'>Son <br>
+        <input type="checkbox" name="sanpham" id="sp2" value="550k" v-model='giasanpham'>Phấn má <br>
+        <input type="checkbox" name="sanpham" id="sp3" value="400k" v-model='giasanpham'>phấn mắt <br>
+        
+        <input type="textarea" id='ghichuForm' name='ghichuForm' v-model='ghichu'> <br>
+        Họ tên: {{hoten}} <br>
+        giá sản phẩm: {{giasanpham}} <br>
+        ghi chú: {{ghichu}} <br>
+
+    </div>
+
+    <script src="vendor/vue/vue.js"></script>
+
+    <script>
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                hoten: 'Minh Nguyet',
+                giasanpham: [],
+                ghichu: ''
+            },
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

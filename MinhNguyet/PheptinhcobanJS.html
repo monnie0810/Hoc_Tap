@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh phep toan don gian voi JS</title>
+</head>
+
+<body>
+    <h1>Thuc hien cac phep tinh sau:</h1>
+    <script>
+        //Khai bao
+        var a = parseInt(prompt('Vui lap nhap a'));
+        var b = parseInt(prompt('Vui lap nhap b'));
+
+        document.write('<span>So a la <span style="color:brown; font-weight: bold">'+ a +'</span></span><br>');
+        document.write('<span>So b la <span style="color:green; font-weight: bold">'+ b +'</span></span><br>');
+        document.write('========== <br>');
+
+        // var tong = a + b;
+        // var hieu = a - b;
+        // var tich = a * b;
+        // var thuong = parseFloat(a / b);
+        // document.write('  <span>Tong cua 2 so la <span style="color: blue; font-weight: bold">'+ tong +'</span></span></br>');
+        // document.write('  <span>Hieu cua 2 so la <span style="color: blue; font-weight: bold">'+ hieu +'</span></span></br>');
+        // document.write('  <span>Tich cua 2 so la <span style="color: blue; font-weight: bold">'+ tich +'</span></span></br>');
+        // document.write('  <span>Thuong cua 2 so la <span style="color: blue; font-weight: bold">' + thuong + '</span></span></br>');
+
+        function Tong(){
+            var tong = a + b;
+            document.write('<span>Tong cua 2 so la <span style="color: blue; font-weight: bold">'+ tong +'</span></span></br>');
+        }
+        function Hieu(){
+            var hieu = a - b;
+            document.write('<span>Hieu cua 2 so la <span style="color: blue; font-weight: bold">'+ hieu +'</span></span></br>');
+        }
+        function Tich(){
+            var tich = a * b;
+            document.write('<span>Tich cua 2 so la <span style="color: blue; font-weight: bold">'+ tich +'</span></span></br>');
+        }
+        function Thuong(){
+            var thuong = parseFloat(a / b);
+            document.write('<span>Thuong cua 2 so la <span style="color: blue; font-weight: bold">'+ thuong +'</span></span></br>');
+        }
+    </script>
+
+    <input type="button" name="Tong +" id="Tong" value="Phep cong" onclick="Tong()">
+    <br>
+    <br>
+    <input type="button" name="Hieu -" id="Hieu" value="Phep tru" onclick="Hieu()">
+    <br>
+    <br>
+    <input type="button" name="Tich *" id="Tich" value="Phep nhan" onclick="Tich()">
+    <br>
+    <br>
+    <input type="button" name="Thuong /" id="Thuong" value="Phep chia" onclick="Thuong()">
+
+</body>
+
+</html>

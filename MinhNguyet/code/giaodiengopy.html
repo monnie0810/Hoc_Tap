@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Website Salomon - Góp ý</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+  <form action="" method="post" enctype="multipart/form-data" name="frmGopY" id="frmGopY">
+    <table width="100%" border="0" cellpadding="5" cellspacing="0" class="TableForm">
+      <tr>
+        <td colspan="2" class="TieuDe">Nhập thông tin góp ý</td>
+      </tr>
+      <tr>
+        <td width="180" class="Left"><label for="slChuDe">Chủ đề:</label></td>
+        <td>
+          <select name="slChuDe" id="slChuDe">
+            <option value="">Chọn chủ đề</option>
+            <option value="dichvu">Góp ý về dịch vụ</option>
+            <option value="website">Góp ý về website</option>
+            <option value="sanpham">Góp ý về sản phẩm</option>
+            <option value="khac">Góp ý khác</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td class="Left"><label for="txtHoTen">Họ và tên:</label></td>
+        <td class="Right"><input type="text" name="txtHoTen" id="txtHoTen" value="" />
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left"><label for="txtDiaChi">Địa chỉ:</label></td>
+        <td class="Right"><input type="text" name="txtDiaChi" id="txtDiaChi" value="" size="50" />
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left"><label for="txtDienThoai">Điện thoại</label></td>
+        <td class="Right"><input type="text" name="txtDienThoai" id="txtDienThoai" value="" />
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left"><label for="txtEmail">Email:</label></td>
+        <td class="Right"><input type="text" name="txtEmail" id="txtEmail" value="" />
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left">Bạn biết Salomon qua:</td>
+        <td class="Right">
+          <p>
+            <label>
+              <input type="checkbox" name="chkBietQua" value="bc" id="chkBietQua_0" />
+              Báo chí</label>
+            <br />
+            <label>
+              <input type="checkbox" name="chkBietQua" value="in" id="chkBietQua_1" />
+              Internet</label>
+            <br />
+            <label>
+              <input type="checkbox" name="chkBietQua" value="tr" id="chkBietQua_2" />
+              Truyền miệng</label>
+            <br />
+            <label>
+              <input type="checkbox" name="chkBietQua" value="kh" id="chkBietQua_3" />
+              Khác</label>
+            <br />
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left">Bạn có giao dịch qua Salomon chưa?</td>
+        <td class="Right"><label>
+            <input type="radio" name="rdCoGiaoDich" value="1" id="rdCoGiaoDich_0" />
+            Có</label>
+          <label>
+            <input type="radio" name="rdCoGiaoDich" value="0" id="rdCoGiaoDich_1" />
+            Chưa</label>
+
+
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left"><label for="txtNoiDung">Nội dung:</label></td>
+        <td class="Right"><textarea name="txtNoiDung" id="txtNoiDung" cols="45" rows="5"></textarea>
+          <font class="BatBuoc">*</font>
+        </td>
+      </tr>
+      <tr>
+        <td class="Left">Tập tin:</td>
+        <td class="Right"><label for="txtFile"></label>
+          <input type="file" name="txtFile" id="txtFile" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left">
+          <font color="#FF0000">*</font> là bắt buộc nhập
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="button" name="btnCapNhat" id="btnCapNhat" value="Cập nhật" class="Button" onclick="hienthi()" />
+          <input type="reset" name="btnNhapLai" id="btnNhapLai" value="Nhập lại" class="Button" /></td>
+      </tr>
+    </table>
+
+  </form>
+
+  <script>
+    function hienthi() {
+      var chude = document.getElementById("slChuDe").value;
+      var hoten = document.getElementById("txtHoTen").value;
+      var diachi = document.getElementById("txtDiaChi").value;
+      var sdt = document.getElementById("txtDienThoai").value;
+      var email = document.getElementById("txtEmail").value;
+      var noidung = document.getElementById("txtNoiDung").value;
+      var file = document.getElementById("txtFile").value;
+
+
+      var bietqua = "";
+      var slbietqua = document.getElementsByName("chkBietQua").length;
+      for (var i = 0; i < slbietqua; i++) {
+        var elebietqua = document.getElementsByName("chkBietQua").item(i);
+        if (elebietqua.checked == true) {
+          bietqua += elebietqua.value + ',';
+        }
+      }
+      var giaodich = "";
+      var slgiaodich = document.getElementsByName("rdCoGiaoDich").length;
+      for (var j = 0; j < slgiaodich; j++) {
+        var elegiaodich = document.getElementsByName("rdCoGiaoDich").item(j);
+        if (elegiaodich.checked == true) {
+          giaodich = elegiaodich.value;
+        }
+      }
+      var loi = "";
+      if (hoten == "") {
+        loi += "vui long nhap ho ten !\n";
+      } else if (hoten <= 3) {
+        loi += "ho ten phai chua it nhat 3 ky tu !\n";
+      } else if (hoten > 50) {
+        loi += "ho ten chua nhieu nhat 50 ky tu !\n";
+      } else if (hoten == "admin") {
+        loi += "ten nguoi dung khong hop le!\n";
+      }
+      if (diachi == "") {
+        loi += "vui long nhap dia chi !\n";
+      }
+      if (sdt == "") {
+        loi += "vui long nhap so dien thoai !\n";
+      }
+      if (email == "") {
+        loi += "vui long nhap email !\n";
+      }
+      if (giaodich == "") {
+        loi += "vui long chon trang thai giao dich !\n";
+      }
+      if (!
+      (file.indexOf(".jpg") >= 0 ||file.indexOf(".jpeg") >= 0 || file.indexOf(".png") >= 0 || file.indexOf(".gif") >= 0))
+     {
+      loi += "file khong hop le";  
+     }
+     if (loi != ""){
+      alert(loi);
+      return;
+     }
+     
+      
+
+      // var
+      alert("chu de: " + chude + "\n" +
+        "ho ten: " + hoten + "\n" +
+        "dia chi: " + diachi + "\n" +
+        "so dien thoai: " + sdt + "\n" +
+        "email: " + email + "\n" +
+        "noi dung: " + noidung + "\n" +
+        "co giao dich: " + giaodich + "\n" +
+        "biet qua: " + bietqua + "\n"
+      );
+
+    }
+  </script>
+
+</body>
+
+</html>

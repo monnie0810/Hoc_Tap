@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản hệ thống</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 330px;
+    }
+
+    span {
+        color: red;
+    }
+    h2{
+        padding-left: 25px;
+    }
+
+    .main {
+        display: block;
+        background-color: bisque;
+        padding-left: 15px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 100px 44% 0px 30%;
+    }
+
+    .td1 {
+        text-align: right;
+    }
+
+    .td2 {
+        text-align: left;
+    }
+
+    .input1 {
+        padding-left: 8px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h2>Đăng ký tài khoản hệ thống</h2>
+        <form name="formdk" action="/dang-ky" method="post" id="form" enctype="multipart/form-data">
+            <table lass="table1" cellpadding='5'>
+
+                <tr>
+                    <td class="td1">Tên đăng nhập(<span>*</span>)</td>
+                    <td class="input1"><input type="text" name="tentk" id="tentk">
+                </tr>
+                <tr>
+                    <td class="td1">Password(<span>*</span>)</td>
+                    <td class="input1"><input type="password" name="mk" id="mk"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Nhập lại password(<span>*</span>)</td>
+                    <td class="input1"><input type="password" name="mka" id="mka"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Họ của bạn(<span>*</span>)</td>
+                    <td class="input1"><input type="text" name="first_name" id="first_name"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Tên của bạn(<span>*</span>)</td>
+                    <td class="input1"><input type="text" name="last_name" id="last_name"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Email(<span>*</span>)</td>
+                    <td class="input1"><input type="text" name="mail" id="mail"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Số điện thoại(<span>*</span>)</td>
+                    <td class="input1"><input type="tel" name="sdt" id="sdt"></td>
+                </tr>
+                <tr>
+                    <td class="td2"><button type="submit" value="submit">Đăng ký</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    const form = document.getElementById("form");
+    form.addEventListener('submit', validateForm);
+    function validateForm(event) {
+        event.preventDefault();
+        let username = document.getElementById('tentk').value;
+        let usernameTest = /^[a-zA-Z][a-zA-Z0-9]{5,14}$/;
+        if (username == "") {
+            alert("Bạn chưa nhập tên tài khoản");
+            return false;
+        }
+        if (!usernameTest.test(username)) {
+            alert("Tên đăng nhập bắt đầu phải là chữ cái và không chứa khoảng trống, tên đăng nhập chứa 5 đến 14 ký tự");
+            return false;
+        }
+        //mat khau
+        let password = document.getElementById('mk').value;
+        let passwordTest = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+        if (password == "") {
+            alert("Bạn chưa nhập mật khẩu");
+            return false;
+        }
+        if (!passwordTest.test(password)) {
+            alert("Mật khẩu phải chứa ký tự, 1 ký tự số, 1 ký tự đặc biệt, có 1 ký tự chữ hoa và thường và không chứa tên người dùng");
+            return false;
+        }
+        if (password.indexOf(username) !== -1) {
+            alert("Mật khẩu không chứa tên người dùng");
+            return false;
+        }
+        //nhap lai mat khau
+        let repassword = document.getElementById('mka').value;
+        let repasswordTest = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+        if (repassword == "") {
+            alert("Bạn chưa nhập lại mật khẩu");
+            return false;
+        }
+        if (!repasswordTest.test(repassword)) {
+            alert("Mật khẩu không khớp");
+            return false;
+        }
+
+        //ho
+        let f_name = document.getElementById('first_name').value;
+        if (f_name == "") {
+            alert("Mời bạn nhập họ");
+            return false;
+        }
+
+        //ten
+        let l_name = document.getElementById('last_name').value;
+        if (l_name == "") {
+            alert("Mời bạn nhập tên");
+            return false;
+        }
+
+        //email
+        let email = document.getElementById('mail').value;
+        let aCong = email.indexOf("@");
+        let dauCham = email.lastIndexOf(".");
+        if (email == "") {
+            alert("Mời bạn nhập Email");
+            return false;
+        } else if ((aCong < 1) || (dauCham < aCong + 2) || (dauCham + 2 > email.length)) {
+            alert("Email bạn điền chưa đúng cú pháp");
+            return false;
+        }
+
+        //phone
+        let phone = document.getElementById('sdt').value;
+        let phoneTest = /([0-9]{12}\b)/g;;
+        if (phone == "") {
+            alert("Mời bạn nhập số điện thoại");
+            return false;
+        }
+        if (!phoneTest.test(phone)) {
+            alert("Số điện thoại phai bao gồm 12 ký tự Vd: 840123456789");
+            return false;
+        }
+
+        form.submit();
+        alert("Bạn đã đăng ký thành công");
+    }
+</script>
+
+</html>

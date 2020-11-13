@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-129</title>
+</head>
+
+<body>
+    <div id="main1">
+        <table border="1" id="table1" onmousemove="doimau()">
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cum, voluptates doloribus iste ipsa
+                    debitis qui repellat molestias recusandae deleniti? Pariatur magni doloremque, accusamus
+                    necessitatibus
+                    in officiis illum magnam ex.</td>
+            </tr>
+        </table>
+    </div>
+    <div id="main2">
+        <table border="1" id="table2" onmousemove="doimau()" onmouseout="trolai()">
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cum, voluptates doloribus iste ipsa
+                    debitis qui repellat molestias recusandae deleniti? Pariatur magni doloremque, accusamus
+                    necessitatibus
+                    in officiis illum magnam ex.</td>
+            </tr>
+        </table>
+    </div>
+    <div id="main3">
+        <table border="1" id="table3" onmousemove="doimau()" onmouseout="trolai()">
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cum, voluptates doloribus iste ipsa
+                    debitis qui repellat molestias recusandae deleniti? Pariatur magni doloremque, accusamus
+                    necessitatibus
+                    in officiis illum magnam ex.</td>
+            </tr>
+        </table>
+    </div>
+    <div id="main4">
+        <table border="1" id="table4" onmousemove="doimau()" onmouseout="trolai()">
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cum, voluptates doloribus iste ipsa
+                    debitis qui repellat molestias recusandae deleniti? Pariatur magni doloremque, accusamus
+                    necessitatibus
+                    in officiis illum magnam ex.</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script>
+    function doimau(table4){
+        document.getElementById("table4").style.backgroundColor = "orange"; 
+
+    }
+    function trolai(table4){
+        document.getElementById("table4").style.backgroundColor = "violet";
+
+    }
+    //
+    table1.style.width = '400px';
+    table1.style.borderCollapse = 'collapse';
+    table1.style.backgroundColor = 'red';
+    table1.style.zIndex = '1';
+    main1.style.position ='relative';
+    //
+    table2.style.width = '400px';
+    table2.style.borderCollapse = 'collapse';
+    table2.style.backgroundColor = 'green';
+    table2.style.zIndex = '2';
+    main2.style.position = 'absolute';
+    // main2.style.margin = '50px 0px 0px 50px';
+    main2.style.top = '50px';
+    main2.style.left = '100px';
+    //
+    table3.style.width = '400px';
+    table3.style.borderCollapse = 'collapse';
+    table3.style.backgroundColor = 'yellow';
+    table3.style.zIndex = '3';
+    main3.style.position = 'absolute';
+    // main3.style.margin = '100px 0px 0px 100px';
+    main3.style.top = '100px';
+    main3.style.left = '150px';
+    //
+    table4.style.width = '400px';
+    table4.style.borderCollapse = 'collapse';
+    table4.style.backgroundColor = 'violet';
+    table4.style.zIndex = '4';
+    main4.style.position = 'absolute';
+    // main4.style.margin = '150px 0px 0px 150px';
+    main4.style.top = '150px';
+    main4.style.left = '200px';
+
+</script>
+
+</html>

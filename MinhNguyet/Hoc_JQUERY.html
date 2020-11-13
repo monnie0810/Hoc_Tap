@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>học JQUERY</title>
+    
+    <link href="vendor/Jquery-ui/jquery-ui.min.css" rel="stylesheet" text>
+    <link href="vendor/Jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" >
+    <link href="vendor/Jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" >
+    <link href="vendor/aos-master/dist/aos.css" rel="stylesheet" >
+    <link href="vendor/fancybox-master/dist/jquery.fancybox.css" rel="stylesheet" >
+    <link href="vendor/fancybox-master/dist/jquery.fancybox.min.css" rel="stylesheet" >
+
+</head>
+
+<body>
+    <h1 data-aos="zoom-in-right" >HỌC JQUERY</h1>
+    <p>dòng văn bản thứ 1</p>
+    <p>dòng văn bản thứ 2</p>
+    <p>dòng văn bản thứ 3</p>
+    <input type="button" name="hienthi" id="hienthi" value="hiển thị" data-aos="zoom-out-down" />
+    <input type="button" name="an" id="an" value="ẩn" /><br/>
+    nhap ghi chu
+    <textarea id="ghichu" ></textarea><br/>
+    nhap ngay thang:
+    <input type="text" id="datepicker"><br/>
+    <a data-fancybox="gallery" href="img/foody-675x355_foodyappbanner-636530746968443602 (1).jpg"><img src="img/hinh.jpg"></a><br>
+    <a data-fancybox="gallery" href="img/hinh.jpg"><img src="img/logo.jpg"></a>
+
+    <script src="vendor/Jquery/jquery-3.5.1.min.js"> </script>
+    <script src="vendor/ckeditor/ckeditor.js"> </script>
+    <script src="vendor/Jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/aos-master/dist/aos.js"></script>
+    <script src="vendor/fancybox-master/dist/jquery.fancybox.js"></script>
+    <script src="vendor/fancybox-master/dist/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#hienthi').click(function () {
+                $('p').show();
+
+            });
+            $('#an').click(function () {
+                $('p').hide();
+
+            });
+        });
+        CKEDITOR.replace('ghichu');
+        $( "#datepicker" ).datepicker();
+        AOS.init();
+    </script>
+</body>
+
+</html>

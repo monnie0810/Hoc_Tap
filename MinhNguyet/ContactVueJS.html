@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="vendor/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="ContactVueJS.js" type="text/css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Liên Hệ</h1>
+            <!-- hien thi loi -->
+            <div class="alert alert-danger" role="alert" v-if="error.length > 0">
+                <b>Vui lòng kiểm tra lại các lỗi sau:</b>
+                <ul>
+                    <li v-for="err in error">{{ err }}</li>
+                </ul>
+            </div>
+            <form name="FormContact" id="FormContact" action="" @submit="kiemtradulieu" method="POST">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Họ tên: </label>
+                            <input type="text" name="txtHoten" id="txtHoten" class="form-control" v-model="hoten">
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Email: </label>
+                            <input type="email" name="txtemail" id="txtemail" class="form-control" v-model="email">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Số điện thoại: </label>
+                            <input type="text" name="txtsdt" id="txtsdt" class="form-control" v-model="sodienthoai">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="">ghi chú </label>
+                            <input type="textarea" name="txtghichu" id="txtghichu" class="form-control" v-model="ghichu">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary">Gửi thông tin</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="vendor/vue/vue.js"></script>
+    <script src="ContactVueJS.js"></script>
+</body>
+
+</html>

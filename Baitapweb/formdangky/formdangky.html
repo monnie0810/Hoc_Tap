@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Account</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="formdangky.css" />
+
+</head>
+
+<body>
+    <div class='nen'>
+        <form id="login" action="#" method="POST" enctype="multipart/form-data" onsubmit="return validateForm(event)">
+            <div class='bang'>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3>Đăng ký tài khoản hệ thống</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Tên đăng nhập <span>*</span></td>
+                        <td>
+                            <input type="text" id="tendangnhap" name="tendangnhap" placeholder="Nhập tên người dùng">
+                            <label id="user_thongbao" style="color: red; "></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu <span>*</span></td>
+                        <td>
+                            <input type="password" id="matkhau" name="matkhau" placeholder="Nhập mật khẩu">
+                            <label id="pass_thongbao" style="color: red; "></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gõ lại mật khẩu <span>*</span></td>
+                        <td>
+                            <input type="password" id="golaimatkhau" name="golaimatkhau" placeholder="Nhập lại mật khẩu">
+                            <label id="repass_thongbao" style="color: red; "></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Họ của bạn <span>*</span></td>
+                        <td>
+                            <input type="text" id="firstname" name="firstname" placeholder="Nhập họ">
+                            <label id="firstname_thongbao" style="color: red;"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tên của bạn <span>*</span></td>
+                        <td>
+                            <input type="text" id="lastname" name="lastname" placeholder="Nhập tên">
+                            <label id="lastname_thongbao" style="color: red;"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email <span>*</span></td>
+                        <td>
+                            <input type="email" id="email" name="email" placeholder="Nhập email">
+                            <label id="email_thongbao" style="color: red; "></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại <span>*</span></td>
+                        <td>
+                            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                            <label id="phone_thongbao" style="color: red;"></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button name="btndangky" id="btndangky" type="submit" value="submit">Đăng ký </button>
+                            <button name="btnreset" id="btnreset" type="reset">Làm lại </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        var form = document.getElementById("login");
+
+        function validateForm(event) {
+            var ok = true;
+            event.preventDefault();
+            //tên tài khoản
+            var username = document.getElementById('tendangnhap').value;
+            var usernameTest = /^[a-zA-Z][a-zA-Z0-9]{5,20}$/;
+            if (username == "" || username == null) {
+                document.getElementById('user_thongbao').innerHTML = "Vui lòng nhập tên tài khoản !";
+                ok = false;
+            } else if (!usernameTest.test(username)) {
+                document.getElementById('user_thongbao').innerHTML = "Tên tài khoản không hợp lệ !";
+                ok = false;
+            } else {
+                document.getElementById('user_thongbao').innerHTML = "";
+                ok = true;
+            }
+            //mật khẩu
+            var password = document.getElementById('matkhau').value;
+            var passwordTest = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+            if (password == "") {
+                document.getElementById('pass_thongbao').innerHTML = "Vui lòng nhập  mật khẩu  !";
+                ok = false;
+            } else if (!passwordTest.test(password)) {
+                document.getElementById('pass_thongbao').innerHTML = " Mật khẩu không hợp lệ !";
+                ok = false;
+            } else {
+                document.getElementById('pass_thongbao').innerHTML = " ";
+                ok = true;
+            }
+            //gõ lại mật khẩu
+            var repassword = document.getElementById('golaimatkhau').value;
+            if (repassword == "") {
+                document.getElementById('repass_thongbao').innerHTML = "Vui lòng nhập mật khẩu !";
+                ok = false;
+            } else if (!passwordTest.test(password)) {
+                document.getElementById('repass_thongbao').innerHTML = "Mật khẩu  không hợp lệ !";
+                ok = false;
+            } else if (repassword != password) {
+                document.getElementById('repass_thongbao').innerHTML = "Mật khẩu  không khớp !";
+                ok = false;
+            } else {
+                document.getElementById('repass_thongbao').innerHTML = " ";
+                ok = true;
+            }
+
+
+            // //email
+            var email = document.getElementById('email').value;
+
+            if (email == "") {
+                document.getElementById('email_thongbao').innerHTML = "Vui lòng nhập email !";
+                ok = false;
+            } else if (!isEmail(email)) {
+                document.getElementById('email_thongbao').innerHTML = "Email  không khớp !";
+                ok = false;
+            } else {
+                document.getElementById('email_thongbao').innerHTML = "";
+                ok = true;
+            }
+
+            // //phone
+            var sdt = document.getElementById('phone').value;
+            var phoneTest = /^[0-9]{12,12}$/;
+
+            if (sdt == "") {
+                document.getElementById('phone_thongbao').innerHTML = "Vui lòng nhập SĐT! !";
+                ok = false;
+            } else if (!phoneTest.test(sdt)) {
+                document.getElementById('phone_thongbao').innerHTML = "SĐT không hợp lệ !";
+                ok = false;
+            } else {
+                document.getElementById('phone_thongbao').innerHTML = "";
+                ok = true;
+            }
+            return ok;
+            form.submit();
+
+        }
+    </script>
+</body>
+
+</html>

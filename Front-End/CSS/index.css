@@ -1,0 +1,715 @@
+/* [code language=”css”] .class,
+#ID,
+div {
+    white-space: nowrap;
+} */
+
+body {
+    font-size: 15px;
+    color: #151515;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 1;
+}
+
+
+/* header full */
+
+.header {
+    background-color: black;
+}
+
+
+/* header trái */
+
+.search-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: auto;
+}
+
+.search-button {
+    margin-top: 50px;
+    margin-right: auto;
+    /* margin-left: 100px; */
+    padding-left: 0px;
+}
+
+
+/* header giữa */
+
+.logo-header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 10px;
+    border-bottom: 1px solid #424242;
+}
+
+
+/* head phai */
+
+.header-icon {
+    text-align: left;
+    padding-left: 0px;
+}
+
+.icon-button a {
+    text-decoration: none;
+    color: white;
+    width: 40px;
+}
+
+.icon-button {
+    color: white;
+}
+
+.danhnhap-button {
+    border-right: 1px solid white;
+    padding-left: 2px;
+    padding-right: 10px;
+    text-align: right;
+    margin-top: 50px;
+    transition: font-size 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+.danhnhap-button:hover {
+    /* margin-top: 45px; */
+    font-size: 16px;
+}
+
+.danhnhap-button:hover a {
+    color: #FACC2E;
+}
+
+.giohang-button {
+    margin-top: 50px;
+    transition: font-size 0.3s ease-in-out;
+    padding-left: 10px;
+    padding-right: 2px;
+    font-size: 15px;
+}
+
+.giohang-button:hover {
+    font-size: 16px;
+}
+
+.giohang-button:hover a {
+    color: #FACC2E;
+}
+
+
+/* end header */
+
+
+/* start navbar-header */
+
+.navbar-header {
+    background-color: black;
+    height: 70px;
+    line-height: 3;
+    position: relative;
+}
+
+.item-navbar {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 17px;
+    color: white;
+    transition: color .3s ease-in-out;
+}
+
+.navbar-header ul li:hover .item-navbar {
+    color: yellow
+}
+
+.navbar-header ul li a:active {
+    color: lightcoral;
+}
+
+
+/* end navbar-header */
+
+
+/* start anh index home */
+
+.anh_nav {
+    padding: 0px;
+}
+
+.anh_nav img {
+    height: 690px;
+}
+
+
+/* nội dung nút sản phẩm */
+
+.sanpham-content {
+    margin-left: -310px;
+    display: none;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    width: 780px;
+    float: none;
+    background-color: white;
+    border: none;
+    box-shadow: 5px 5px 5px #888888;
+    transition: animation 2s ease-in-out;
+}
+
+.sanpham-block:hover .sanpham-content {
+    display: inline-block;
+    z-index: 99;
+    animation: animate__fadeInUp;
+    animation-duration: 2s;
+}
+
+.sanpham-content ul {
+    width: 250px;
+    display: inline-block;
+    float: left;
+}
+
+.sanpham-content h6 {
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.sanpham-level ul li a {
+    color: black;
+}
+
+.sanpham-level ul li {
+    padding-left: 5px;
+    transition: all 0.2s ease-in;
+}
+
+.sanpham-level ul li:hover a {
+    color: #DF3A01;
+    text-decoration: none;
+}
+
+.sanpham-content ul li:hover {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.sanpham-block {
+    position: relative;
+}
+
+
+/* danh muc san pham */
+
+.title_danhmuc {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.title_danhmuc p {
+    font-size: 15px;
+    color: #A4A4A4;
+    font-weight: normal;
+}
+
+.title_danhmuc img {
+    margin-top: -17px;
+}
+
+.danhmuc_sp {
+    margin-top: 10px;
+}
+
+.danhmuc_sp span {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.danhmuc_sp a:hover span {
+    background-color: black;
+    color: white;
+}
+
+.danhmuc_sp a {
+    transition: transform 0.5 ease-in-out;
+}
+
+.danhmuc_sp img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.danhmuc_sp a:hover img {
+    transform: scale(1.1);
+}
+
+.img_col {
+    height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.danhmuc_col1 img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.danhmuc_col1 {
+    padding: 10px 20px 0px 0px;
+}
+
+.danhmuc_col2 img {
+    width: 100%;
+    height: 190px;
+}
+
+.danhmuc_col2 {
+    margin-top: 10px;
+    height: 190px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.danhmuc_col3 img {
+    width: 100%;
+    height: 190px;
+}
+
+.danhmuc_col3 {
+    margin-top: 20px;
+    height: 190px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px;
+}
+
+
+/* gioi thieuj chinh sach  */
+
+.gioithieu img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.hotro {
+    padding-left: 0px;
+    margin-top: 30px;
+    /* border: 1px solid #A4A4A4; */
+    /* background-color: #D8D8D8; */
+}
+
+.content_hotro {
+    margin-left: 61px;
+    text-align: center;
+}
+
+.content_hotro h6 {
+    color: #1C1C1C;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content_hotro a {
+    color: #1C1C1C;
+    text-decoration: none;
+}
+
+.content_hotro:hover a {
+    color: #FE2EC8;
+    font-weight: 800;
+}
+
+
+/* image product */
+
+.card_sanpham {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.title_cardsp span {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.xemthem_cardsp a {
+    text-decoration: none;
+    color: #6E6E6E;
+    bottom: 3px;
+    right: 5px;
+    position: absolute;
+}
+
+.xemthem_cardsp a:hover {
+    color: #FA8258;
+}
+
+.thanhngang {
+    width: 150px;
+    height: 10px;
+    background-color: orangered;
+    position: absolute;
+    bottom: 7px;
+    left: 5px;
+}
+
+.ele-card p {
+    font-weight: bolder;
+    font-size: 17px;
+    color: red;
+}
+
+.row_sanpham {
+    margin-top: 10px;
+}
+
+.ele-card {
+    height: 300px;
+    padding: 0px;
+    border: none;
+}
+
+.image-card {
+    height: 300px;
+}
+
+.title-product h3 {
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 0px;
+}
+
+.div_card {
+    padding: 0px 10px;
+    border: none;
+}
+
+.giagiam {
+    text-decoration: line-through;
+}
+
+.bodyCard {
+    text-align: center;
+    background-color: white;
+}
+
+
+/* hover san pham  */
+
+.div_img_card {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.div_img_card img {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.div_img_card:hover img {
+    opacity: 0.4;
+}
+
+.overlay a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    background-color: #FE642E;
+    border: 2px solid #FE642E;
+    border-radius: 10px;
+}
+
+.overlay a:hover {
+    background-color: white;
+    border: 2px solid #FE642E;
+}
+
+.icon_thanhtoan a {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    left: 40%;
+    top: 30%;
+    vertical-align: middle;
+}
+
+.icon_thanhtoan a i {
+    padding-top: 15px;
+}
+
+.icon_xemthem a {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    left: 40%;
+    top: 48%;
+}
+
+.icon_xemthem a i {
+    padding-top: 15px;
+}
+
+.div_img_card:hover .overlay a {
+    visibility: visible;
+}
+
+
+/* end hover san pham  */
+
+
+/* giam gia sau  */
+
+.giamgiasau_area {
+    margin-top: 20px;
+    background-color: #FAAC58;
+    height: 540px;
+    padding-top: 20px;
+}
+
+.row_giamgiasau span {
+    font-weight: inherit;
+}
+
+.giamgiasau_icon a {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.giamgiasau_icon {
+    margin-bottom: 5px;
+    margin-top: -9px;
+}
+
+
+/* muc quang cao  */
+
+.quangcao_area {
+    margin-bottom: -10px;
+}
+
+.img_quangcao {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+}
+
+.img_quangcao img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.img_quangcao:hover img {
+    transform: scale(1.2);
+}
+
+.quangcao_col a span {
+    color: black;
+    font-size: 22px;
+    font-weight: bolder;
+    transition: color 0.2s ease-in;
+}
+
+.quangcao_col a p {
+    font-size: 14px;
+    padding-top: 20px;
+    color: #2E2E2E;
+    font-weight: none;
+    text-decoration: none;
+}
+
+.quangcao_col a:hover span {
+    color: #8A2908
+}
+
+.quangcao_col a:hover {
+    text-decoration: none;
+}
+
+
+/* footer_img  */
+
+.footer_img img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer_img {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/* footer_content  */
+
+.footer_content {
+    background-color: black;
+    color: #A4A4A4;
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer_content img {
+    width: 244px;
+    height: 85px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer_content p {
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: white;
+}
+
+.footer_content ul {
+    padding-left: 0px;
+}
+
+.footer_content ul li {
+    padding-left: 0px;
+    margin-bottom: 10px;
+}
+
+.footer_content ul li a {
+    color: #A4A4A4;
+}
+
+.footer_content ul li a:hover {
+    color: #FFFF00;
+    text-decoration: none;
+}
+
+.col_footer {
+    border-left: 1px solid #A4A4A4;
+    border-right: 1px solid #A4A4A4;
+}
+
+.email_button {
+    margin-left: 25px;
+    color: white;
+    font-weight: bolder;
+    /* padding: 3px 0px; */
+}
+
+.btn_orange {
+    background-color: #FE642E;
+    border: 2px solid #FE642E;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    height: 37.5px;
+    width: 130px;
+}
+
+.btn_orange:hover {
+    background-color: white;
+    color: #DF3A01;
+}
+
+.icon_email span {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 37.5px;
+}
+
+.icon_lienhe img {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    margin-top: 0px;
+}
+
+.icon_lienhe a {
+    float: left;
+    margin-right: 25px;
+}
+
+.icon_lienhe a p {
+    color: #424242;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 37px;
+    vertical-align: middle;
+}
+
+.icon_lienhe a:hover p {
+    color: #FFFF00;
+    text-decoration: none;
+}
+
+.icon_lienhe a:hover {
+    text-decoration: none;
+}
+
+.ghichu_footer p {
+    text-align: center;
+    color: #424242;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 25px 0px;
+    margin-bottom: 0px;
+}
+
+.ghichu_footer p span {
+    color: #886A08;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.title_email_footer {
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+.title_email_footer p {
+    /* margin-bottom: 25px; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+}
+
+
+/* duong dan trang  */
+
+.duongdan ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* form dang nhap  */
+
+.alert {
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-left: 30px;
+}

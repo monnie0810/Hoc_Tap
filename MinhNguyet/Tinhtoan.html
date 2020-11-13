@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh toan</title>
+</head>
+
+<body>
+    <form id="tinh" name="tinh" method="POST" onsubmit="Tinhptpn()" action="">
+        <p>Nhap a
+            <input type="text" id="soA" name="soA">
+        </p>
+        <p>Nhap b
+            <input type="text" id="soB" name="soB">
+        </p>
+        <br>
+        <input type="button" id="btn" name="btn" value="Tinh ptbn" onclick="Tinhptpn()">
+    </form>
+</body>
+<script>
+    function Tinhptpn() {
+        var a = document.getElementById('soA').value;
+        var b = document.getElementById('soB').value;
+        var KQ = 0;
+
+        if (a == "") {
+            alert('Vui long nhap so a');
+            return;
+        }
+        if (b=="") {
+            alert('Vui long nhap so b');
+            return;
+        }
+        if ( isNaN(a) ||  isNaN(b)){
+            alert('Vui long nhap so la kieu so');
+            return;
+        }else{
+            KQ = b/a;
+            alert('Ket qua cua phep tinh la: '+KQ);
+        }
+        
+
+    }
+
+</script>
+
+</html>

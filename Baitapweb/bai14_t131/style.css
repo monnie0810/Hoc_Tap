@@ -1,0 +1,150 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Tahoma;
+    font-size: 15px;
+}
+
+.main {
+    margin: 0px auto;
+    width: 900px;
+    height: 100%;
+}
+
+.title {
+    background-color: #FF8000;
+    text-align: center;
+    height: 80px;
+}
+
+.title p {
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.nav1 {
+    width: 100%;
+    height: 28.4px;
+    background-color: #151515;
+}
+
+.nav1 ul li {
+    list-style-type: none;
+    float: left;
+}
+
+.nav1 ul li a {
+    color: white;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: 1px solid white;
+    text-decoration: none;
+    padding: 5px 19.9px;
+    display: block;
+}
+
+#lienhe {
+    border-right: none;
+    padding-right: 35.4px;
+}
+
+.nav1 ul li:hover {
+    background-color: white;
+}
+
+.nav1 ul li:hover a {
+    color: #FE642E;
+}
+
+.content_body {
+    clear: both;
+}
+
+.nav2 {
+    width: 20%;
+    height: 550px;
+    float: left;
+    background-color: #FE642E;
+}
+
+.nav2 li {
+    list-style-type: none;
+}
+
+.nav2 p {
+    color: white;
+    background-color: #F7D358;
+    text-align: center;
+    padding: 9px;
+}
+
+.nav2 ul li {
+    display: block;
+    background-color: #FE642E;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav2 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav2 ul li:hover {
+    background-color: white;
+}
+
+.nav2 ul li:hover a {
+    color: #FE642E;
+}
+
+
+/* Phan 4 */
+
+.content_center {
+    width: 60%;
+    height: 550px;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* 5 */
+
+.content_right {
+    width: 20%;
+    height: 550px;
+    float: right;
+    background-color: #FE642E;
+}
+
+.content_right p {
+    padding-left: 10px;
+    padding-bottom: 540px;
+}
+
+
+/* Phan 6 */
+
+.footer {
+    position: inherit;
+    clear: both;
+    text-align: center;
+    border-top: 1px solid grey;
+    padding-bottom: 20px;
+    background-color: #151515;
+    color: #FE642E;
+    padding-top: 20px;
+}
